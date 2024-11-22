@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+body {
+  @apply flex flex-col min-h-screen
+}
+
+.links li a {
+  @apply text-white text-xl
+}
+
+table, th, td {
+  @apply border border-spacing-0 border-black text-center
+}
+
+th, td {
+  @apply p-1
+}
+
+.btn {
+  @apply flex gap-2 items-center justify-center py-2 px-4 font-semibold shadow-md rounded-lg
+}
+
+.btn.btn-light {
+  @apply bg-white text-gray-500
+}
+
+.btn.btn-danger {
+  @apply bg-red-600 text-white shadow-red-400/40
+}
