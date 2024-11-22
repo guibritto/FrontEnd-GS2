@@ -292,12 +292,11 @@ input[type="radio"]:focus {
   }
 
   #img_vida {
-    margin: 5% 0 5% 35%;
+    margin: 5% 0 5% 25%;
     display: flex;
     justify-content: center;
     border: solid 7px white;
-    width: 30%;
-
+    width: 50%;
   }
 
   #texto_home21 {

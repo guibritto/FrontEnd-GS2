@@ -142,7 +142,7 @@ export default function Seus_Resultados() {
                                 </tr>
                             ))}
                         </tbody>
-                        <tfoot className="bg-green-300 text-black text-center">
+                        <tfoot className="bg-green-900 text-white text-center">
                             <tr>
                                 <td colSpan={7}>Total de Previsões: {lista.length}</td>
                             </tr>

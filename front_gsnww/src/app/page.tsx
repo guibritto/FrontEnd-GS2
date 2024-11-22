@@ -1,7 +1,8 @@
 "use client"
 
 import logo from "@/public/logo_home.png";
-import vida from "@/public/vida.jpg";
+import placa from "@/public/Diseno-sin-titulo-2024-09-30T105649.165.jpg";
+import placa2 from "@/public/vantaggiAgricoltori_1200x630.jpg"
 import Image from "next/image";
 import Link from "next/link";
 import "./globals.css";
@@ -42,7 +43,7 @@ export default function Home() {
           </h3>
         </header>
         <div id="corpo11_home">
-          <Image src={vida} alt="cara_no_telefone" className="imgjoia" />
+          <Image src={placa} alt="cara_no_telefone" className="imgjoia" />
           <article id="corpo12_home">
             <p className="id_home1">Descubra como a tecnologia pode transformar o uso de energia no seu dia a dia!</p>
             <p className="id_home2">Economize dinheiro, proteja o meio ambiente e valorize sua propriedade!</p>
@@ -52,7 +53,7 @@ export default function Home() {
       <section id="box_home2">
         <p id="texto_home2">Uma das principais vantagens do GreenEnergyProvider é sua abordagem inovadora e acessível para democratizar o uso de energia renovável. Ao oferecer um simulador personalizado, o projeto capacita comunidades agricolas a entenderem os benefícios econômicos e ambientais de investir em soluções sustentáveis, como painéis solares. Isso reduz barreiras como o alto custo inicial e a falta de informações claras, promovendo escolhas mais conscientes.</p>
         <div id="img_vida">
-          <Image src={vida} alt="grafico" />
+          <Image src={placa2} alt="grafico" />
         </div>
         <article id="texto_home21">
           <p>Além disso, o projeto reflete uma forte preocupação com o meio ambiente, ao incentivar a transição para fontes de energia limpa que contribuem para a descarbonização do planeta.</p><br /><br />

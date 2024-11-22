@@ -3,6 +3,8 @@ import Modal from "@/app/Modal"
 import { Usuario } from "@/types"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react"
 
 export default function Cadastro() {
@@ -58,7 +60,7 @@ export default function Cadastro() {
                     email: "",
                     senha: "",
                 })
-                setOpen(true)
+                navigate.push("/login")
             } else {
                 alert("Erro ao cadastrar!")
             }
@@ -69,7 +71,7 @@ export default function Cadastro() {
 
     return (
         <main className="bg-[url('.././public/blur.png')] bg-no-repeat min-w-screen m-auto flex flex-col">
-            <Link href={"/login"} className="text-white font-bold p-4 text-2xl"></Link>
+            <Link href={"/login"} className="text-white font-bold p-4 text-2xl"><FontAwesomeIcon icon={faArrowLeft} /></Link>
             <div className="w-full m-auto">
                 <div className="bg-white rounded-2xl flex flex-col mb-64 mt-32 ml-auto mr-auto w-1/4">
                     <h1 className="text-green-600 mt-10 text-center font-bold text-6xl mb-10 font-mono">Cadastro do Usuário</h1>

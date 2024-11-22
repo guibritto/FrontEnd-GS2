@@ -3,7 +3,10 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import logo from "@/public/logo_home.png";
-import vida from "@/public/vida.jpg";
+import mapa from "@/public/agrofotovoltaica-vale-este.avif";
+import grafico1 from "@/public/Captura de tela 2024-11-22 165654.jpg";
+import grafico2 from "@/public/Captura de tela 2024-11-22 171339.jpg";
+import grafic3 from "@/public/Captura de tela 2024-11-22 171151.jpg"
 
 
 export default function Previsao() {
@@ -11,9 +14,9 @@ export default function Previsao() {
 
     // Map de imagens para cada opção
     const images: { [key: string]: string } = {
-        grafico1: vida.src,
-        grafico2: logo.src,
-        grafico3: vida.src,
+        grafico1: grafico1.src,
+        grafico2: grafico2.src,
+        grafico3: grafic3.src,
     };
 
     return (
@@ -49,7 +52,7 @@ export default function Previsao() {
                 <h2 className="text-center font-bold m-auto text-3xl mt-20 text-white w-5/6">Cada gráfico foi cuidadosamente desenvolvido para ilustrar dados relevantes, proporcionando insights claros e objetivos. Selecione o gráfico desejado e descubra informações valiosas que podem ajudar a entender melhor como essas soluções sustentáveis contribuem para a preservação do meio ambiente e a economia de recursos.</h2>
                 <div className="flex justify-evenly mt-20 mb-10">
                     {/* Exibição condicional da imagem com base no rádio selecionado */}
-                    <div className="w-2/5">
+                    <div className="w-2/5 mt-10">
                         {selectedRadio && (
                             <figure className="text-center">
                                 {/* Exibição da imagem */}
@@ -62,9 +65,9 @@ export default function Previsao() {
                                 />
                                 {/* Legenda da imagem */}
                                 <figcaption className="mt-4 text-white font-bold text-2xl">
-                                    {selectedRadio === "grafico1" && "Legenda do Gráfico 1"}
-                                    {selectedRadio === "grafico2" && "Legenda do Gráfico 2"}
-                                    {selectedRadio === "grafico3" && "Legenda do Gráfico 3"}
+                                    {selectedRadio === "grafico1" && "Objetivo: Identificar como o aumento no número de placas solares impacta o tempo necessário para atingir o ponto de equilíbrio financeiro. Espera-se uma tendência de redução no tempo de retorno à medida que o número de placas aumenta, embora com possíveis pontos de saturação dependendo do consumo e da geração energética."}
+                                    {selectedRadio === "grafico2" && "Objetivo: Demonstrar a proporcionalidade entre espaço físico e capacidade de instalação. Este gráfico também ajuda a validar o dimensionamento do sistema em relação às necessidades energéticas e a verificar limites práticos de instalação."}
+                                    {selectedRadio === "grafico3" && "Objetivo: Identificar pontos fortes e áreas de melhoria na experiência do usuário. Um alto nível de satisfação em todas as métricas indica que o simulador atende às expectativas dos usuários finais."}
                                 </figcaption>
                             </figure>
                         )}
@@ -76,7 +79,7 @@ export default function Previsao() {
                                 name="radio"
                                 onChange={() => setSelectedRadio("grafico1")}
                             />
-                            Gráfico 1
+                            Tempo Retorno x Quantidade Placas
                         </label>
                         <label className="form-control">
                             <input
@@ -84,7 +87,7 @@ export default function Previsao() {
                                 name="radio"
                                 onChange={() => setSelectedRadio("grafico2")}
                             />
-                            Gráfico 2
+                            Quantidade Placa x Área Disponível
                         </label>
                         <label className="form-control">
                             <input
@@ -92,7 +95,7 @@ export default function Previsao() {
                                 name="radio"
                                 onChange={() => setSelectedRadio("grafico3")}
                             />
-                            Gráfico 3
+                            Satisfação
                         </label>
                     </form>
                 </div>
@@ -104,12 +107,16 @@ export default function Previsao() {
                         <strong className="font-bold text-green-700">viver em um mundo saudável</strong> e equilibrado.
                     </h2>
                 </div>
+                <p className="text-5xl font-bold m-auto mb-20 text-green-700">Energia Agrofotovoltaica</p>
                 <div className="flex justify-evenly mb-32">
                     <div className="w-2/5">
-                        <p className="font-bold text-2xl mt-52">Nosso programa ajuda produtores agropecuários a reduzir custos de energia, proteger sua produção contra oscilações no mercado e adotar práticas sustentáveis que valorizam o negócio e o meio ambiente. Com uma visão clara dos benefícios financeiros e ambientais, você estará preparado para crescer de forma estratégica e responsável.<strong className="font-bold text-green-700">Invista no futuro da sua propriedade e colha os frutos da sustentabilidade!</strong></p>
+                        <p className="font-bold text-2xl mt-6">
+                            <strong className="text-6xl font-bold">A</strong> energia agrofotovoltaica combina a geração de energia solar com a agricultura no mesmo espaço, promovendo uma <strong className="font-bold text-green-700">solução sustentável para a segurança energética e alimentar</strong>. Esse modelo otimiza o uso do solo ao permitir a produção simultânea de alimentos e eletricidade, reduzindo a competição por terras. Além disso, a sombra gerada pelos painéis solares protege as culturas contra o excesso de radiação, diminui a evaporação da água, <strong className="font-bold text-green-700">melhora a eficiência hídrica e pode aumentar a produtividade agrícola</strong>, especialmente em climas quentes e áridos.</p>
+                        <p className="font-bold text-2xl mt-4">
+                            Além dos benefícios ambientais, como a <strong className="font-bold text-green-700">redução de emissões de gases de efeito estufa e a promoção da descarbonização, o sistema também oferece vantagens econômicas e sociais</strong>. Ele diversifica a renda dos agricultores por meio da venda de energia e incentiva o desenvolvimento de comunidades rurais, gerando empregos e fortalecendo a resiliência climática. Ao unir inovação tecnológica com práticas agrícolas sustentáveis, a agrofotovoltaica representa uma solução prática e eficaz para enfrentar os desafios globais de forma integrada.</p>
                     </div>
-                    <div className="p-6 bg-white rounded-xl shadow-2xl hover:scale-105 duration-200">
-                        <Image src={vida} alt="grafico pequeno" className="rounded-xl shadow-md"></Image>
+                    <div className="p-6 bg-green-900 rounded-xl shadow-2xl hover:scale-105 duration-200">
+                        <Image src={mapa} alt="grafico pequeno" className="shadow-md"></Image>
                     </div>
 
                 </div>
