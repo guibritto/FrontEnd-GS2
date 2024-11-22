@@ -1,33 +1,310 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "~slick-carousel/slick/slick.css";
-@import "~slick-carousel/slick/slick-theme.css";
 
-body {
-  @apply flex flex-col min-h-screen
+::selection {
+  background-color: #21581f;
+  color: #fff;
+  text-shadow: none;
 }
 
-.links li a {
-  @apply text-white text-xl
+#G:hover {
+  transform: scale(1.5);
+  transition: 300ms;
+  color: #28bd25;
 }
 
-table, th, td {
-  @apply border border-spacing-0 border-black text-center
+#E:hover {
+  transform: scale(1.5);
+  transition: 300ms;
+  color: #28bd25;
 }
 
-th, td {
-  @apply p-1
+#P:hover {
+  transform: scale(1.5);
+  transition: 300ms;
+  color: #28bd25;
 }
 
-.btn {
-  @apply flex gap-2 items-center justify-center py-2 px-4 font-semibold shadow-md rounded-lg
+.formas {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
 }
 
-.btn.btn-light {
-  @apply bg-white text-gray-500
+.form-control {
+  font-family: system-ui, sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.1;
+  display: grid;
+  grid-template-columns: 1em auto;
+  color: white;
+  gap: 0.5em;
 }
 
-.btn.btn-danger {
-  @apply bg-red-600 text-white shadow-red-400/40
+.form-control+.form-control {
+  margin-top: 1em;
+  color: white;
+}
+
+.form-control:focus-within {
+  color: green
+}
+
+input[type="radio"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  /* Remove most all native input styles */
+  appearance: none;
+  /* For iOS < 15 */
+  background-color: var(--form-background);
+  /* Not removed via appearance */
+  margin: 0;
+
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 50%;
+  transform: translateY(-0.075em);
+
+  display: grid;
+  place-content: center;
+
+}
+
+input[type="radio"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+  /* Windows High Contrast Mode */
+  background-color: CanvasText;
+  color: white;
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1);
+  color: #28bd25
+}
+
+input[type="radio"]:focus {
+  color: #28bd25;
+  outline: max(2px, 0.15em) solid currentColor;
+  outline-offset: max(2px, 0.15em);
+}
+
+/*RODAPE*/
+.box_footer1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+
+/*HOME1*/
+.home {
+  background: #e0f0e0;
+}
+
+@media (max-width: 480px) {
+  .box_home1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0f0e0;
+  }
+
+  #titulo1_home {
+    margin: 0 5% 50% 5%
+  }
+
+  #corpo11_home {
+    display: flex;
+    flex-direction: row;
+    margin: 0 5%;
+  }
+
+  .imgjoia {
+    width: 50%;
+    border-radius: 20px 0 0 20px;
+  }
+
+  .id_home {
+    font-size: 80%;
+  }
+
+  #corpo12_home {
+    background-color: #166814;
+    color: white;
+    border-radius: 0 20px 20px 0;
+    justify-content: end;
+  }
+
+  .id_home1 {
+    margin: 0% 2% 0 2%;
+  }
+
+  .id_home2 {
+    margin: 10% 2% 0 2%;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .box_home1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    background-color: #e0f0e0;
+  }
+
+  #titulo1_home {
+    margin: 5% 5% 5% 10%;
+    font-size: 120%;
+    font-weight: 700;
+  }
+
+  #corpo11_home {
+    display: flex;
+    flex-direction: row;
+    max-width: 90%;
+    margin-bottom: 5%;
+  }
+
+  .imgjoia {
+    width: 45%;
+    border-radius: 20px 0 0 20px;
+  }
+
+  .id_home {
+    font-size: 80%;
+  }
+
+  #corpo12_home {
+    background-color: #166814;
+    color: white;
+    border-radius: 0 20px 20px 0;
+    justify-content: end;
+  }
+
+  .id_home1 {
+    margin-left: 2%;
+    font-size: 120%;
+  }
+
+  .id_home2 {
+    margin: 17% 0 0 2%;
+    font-size: 120%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .box_home1 {
+    font-weight: 700;
+    background-color: #e0f0e0;
+  }
+
+  #titulo1_home {
+    text-decoration: none;
+    grid-area: texto;
+    font-size: 5vh;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0 0 5% 5%;
+  }
+
+  #titulo12_home {
+    font-size: 210%;
+    margin: 0 5% 5% 5%;
+  }
+
+  #corpo11_home {
+    display: flex;
+    margin: 0 15%;
+    width: 70%;
+    justify-self: center;
+    transition: 0.2s;
+    transform: scale(1)
+  }
+
+  #corpo11_home:hover {
+    transition: 0.2s;
+    transform: scale(1.05);
+  }
+
+  .imgjoia {
+    border-radius: 3vh 0 0 3vh;
+    width: 50%;
+    max-height: 60%;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.4)
+  }
+
+  #corpo12_home {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    background-color: #166814;
+    color: white;
+    max-height: 60%;
+    border-radius: 0 3vh 3vh 0;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.4)
+  }
+
+  .id_home1 {
+    margin: 6.5% 3% 6.5% 3%;
+    font-size: 4.5vh;
+  }
+
+  .id_home2 {
+    margin: 15% 3% 6.5% 3%;
+    font-size: 4.5vh;
+  }
+}
+
+/*HOME2*/
+@media (max-width: 480px) {}
+
+@media (min-width: 481px) and (max-width: 1024px) {}
+
+@media (min-width: 1025px) {
+  #box_home2 {
+    display: flex;
+    flex-direction: column;
+    background: #0c360b;
+    border-radius: 30px 30px 0 0;
+    margin-top: 10%;
+  }
+
+  #texto_home2 {
+    text-align: start;
+    color: white;
+    font-size: 220%;
+    margin: 5% 0 0 10%;
+    width: 80%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  #img_vida {
+    margin: 5% 0 5% 35%;
+    display: flex;
+    justify-content: center;
+    border: solid 7px white;
+    width: 30%;
+
+  }
+
+  #texto_home21 {
+    color: white;
+    font-size: 220%;
+    margin: 0 0 0 10%;
+    width: 80%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
 }
