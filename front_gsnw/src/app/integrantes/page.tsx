@@ -6,6 +6,7 @@ import lkd from "@/public/linked.in.png"
 import thi from "@/public/thi.png"
 import donny from "@/public/johnny.png"
 import gui from "@/public/guil.jpg"
+import { FaArrowLeft } from "react-icons/fa"
 
 
 export default function Integrantes() {
@@ -16,7 +17,7 @@ export default function Integrantes() {
     };
     return (
         <main className="bg-black flex flex-col">
-            <Link href={"/"} className="text-white font-bold p-4 text-2xl">SAIR</Link>
+            <Link href={"/"} className="text-white font-bold p-4 text-2xl"><FaArrowLeft /></Link>
             <h1 className="font-bold text-6xl text-white text-center justify-center mt-16">Integrantes</h1>
             <div className="flex mt-44 justify-evenly mb-44">
                 <div className="flex flex-col items-center">
